@@ -1,12 +1,15 @@
 import { ReactElement } from "react";
 import styled from "styled-components";
+import { ReactComponent as Icon } from "../assets/icons/phone.svg";
 
 function AssistanceInformation(): ReactElement {
   return (
     <>
       <AssistanceInformationContainer>
         <CallContainer>
-          <IconPhoneBorder></IconPhoneBorder>
+          <IconPhoneBorder>
+            <PhoneIcon />
+          </IconPhoneBorder>
 
           <PhoneNumberLabel>phone number </PhoneNumberLabel>
         </CallContainer>
@@ -19,6 +22,11 @@ function AssistanceInformation(): ReactElement {
     </>
   );
 }
+
+const PhoneIcon = styled(Icon)`
+  width: 100%;
+  height: 100%;
+`;
 
 const Text = styled.p`
   font-size: 10px;
