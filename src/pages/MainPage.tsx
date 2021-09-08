@@ -1,8 +1,8 @@
+import ImageSection from "./ImageSection";
 import { ReactElement } from "react";
-import styled from "styled-components";
 import AssistanceInformation from "./AssistanceInformation";
 import ContactForm from "./ContactForm";
-import ImageSection from "./ImageSection";
+import styled from "styled-components";
 
 function MainPage(): ReactElement {
   return (
@@ -20,7 +20,7 @@ function MainPage(): ReactElement {
 const FormSection = styled.div`
   display: flex;
   flex-direction: row;
-  min-height: 20rem;
+  min-height: 30rem;
   flex: 1;
 `;
 
