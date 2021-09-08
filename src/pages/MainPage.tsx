@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import styled from "styled-components";
 import AssistanceInformation from "./AssistanceInformation";
 import ContactForm from "./ContactForm";
-import ImageSection from "./frame/ImageSection";
+import ImageSection from "./ImageSection";
 
 function MainPage(): ReactElement {
   return (
