@@ -1,33 +1,49 @@
 import { ReactElement } from "react";
 import styled from "styled-components";
+import { ReactComponent as FacebookIcon } from "../../assets/icons/facebook.svg";
+import { ReactComponent as InstagramIcon } from "../../assets/icons/instagram.svg";
+import { ReactComponent as CompanyIcon } from "../../assets/icons/n.svg";
 
 function Footer(): ReactElement {
   return (
     <FooterContainer>
       <FooterBox>
-        <ShortcutBox>icon</ShortcutBox>
-
         <ShortcutBox>
-          <Paragraph>contact us</Paragraph>
+          <CompanyIconStyled />
         </ShortcutBox>
 
-        <ShortcutBox>icon</ShortcutBox>
+        <ShortcutBox>
+          <Link>text</Link>
+        </ShortcutBox>
 
-        <ShortcutBox>icon</ShortcutBox>
+        <ShortcutBox>
+          <Link>text</Link>
+        </ShortcutBox>
+
+        <ShortcutBox>
+          <FacebookIconStyled />
+          <InstagramIconStyled />
+        </ShortcutBox>
       </FooterBox>
 
       <FooterBox>
-        <Paragraph>all rights reserved</Paragraph>
+        <Paragraph>all rights</Paragraph>
       </FooterBox>
     </FooterContainer>
   );
 }
 
+const IconBase = () => {
+  return `
+    width: 3%;
+    height: 3%;
+  `;
+};
+
 const FooterContainer = styled.div`
   width: 100%;
-  min-height: 6rem;
+  min-height: 4rem;
   background-color: #08315f;
-  color: white;
   margin-top: auto;
 `;
 
@@ -35,8 +51,12 @@ const FooterBox = styled.div`
   flex-direction: row;
   display: flex;
   flex: 1;
-  height: 3rem;
+  height: 2rem;
   align-items: baseline;
+`;
+
+const Link = styled.p`
+  cursor: pointer;
 `;
 
 const Paragraph = styled.a`
@@ -49,6 +69,20 @@ const ShortcutBox = styled.div`
   flex: 1;
   margin-top: auto;
   text-align: center;
+`;
+
+const CompanyIconStyled = styled(CompanyIcon)`
+  ${IconBase()}
+  margin-right: 20px;
+`;
+
+const FacebookIconStyled = styled(FacebookIcon)`
+  ${IconBase()}
+  margin-right: 20px;
+`;
+
+const InstagramIconStyled = styled(InstagramIcon)`
+  ${IconBase()}
 `;
 
 export default Footer;
