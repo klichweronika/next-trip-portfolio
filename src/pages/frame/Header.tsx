@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import styled from "styled-components";
+import { Locale } from "../../common/Locale";
 import LogoImage from "../../assets/images/logo.png";
 
 function Header(): ReactElement {
@@ -7,8 +8,8 @@ function Header(): ReactElement {
     <HeaderContainer>
       <Logo src={LogoImage} alt="logo" />
       <ContactUs>
-        <div>call us</div>
-        <div>phone number</div>
+        <div>{Locale.callUs}</div>
+        <div>{Locale.companyPhoneNumber}</div>
       </ContactUs>
     </HeaderContainer>
   );

@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import styled from "styled-components";
 import { ReactComponent as Icon } from "../assets/icons/phone.svg";
+import { Locale } from "../common/Locale";
 
 function AssistanceInformation(): ReactElement {
   return (
@@ -11,12 +12,12 @@ function AssistanceInformation(): ReactElement {
             <PhoneIcon />
           </IconPhoneBorder>
 
-          <PhoneNumberLabel>phone number </PhoneNumberLabel>
+          <PhoneNumberLabel>{Locale.companyPhoneNumber}</PhoneNumberLabel>
         </CallContainer>
 
         <InformationContainer>
-          <h1>information </h1>
-          <Text>details information</Text>
+          <h1>{Locale.needAssistance}</h1>
+          <Text>{Locale.pleaseCallUs}</Text>
         </InformationContainer>
       </AssistanceInformationContainer>
     </>

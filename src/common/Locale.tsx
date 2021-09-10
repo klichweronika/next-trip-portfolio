@@ -1,4 +1,8 @@
 type Texts = {
+  companyPhoneNumber: string;
+  needAssistance: string;
+  pleaseCallUs: string;
+  email: string;
   subject: string;
   comment: string;
   sendButton: string;
@@ -17,6 +21,11 @@ type Texts = {
 };
 
 export const Locale: Texts = {
+  companyPhoneNumber: "1-888-444-5555",
+  needAssistance: "Need assistance?",
+  pleaseCallUs:
+    "For immediate assistance with your reservation. please call us. For general questions you can email us. You'll receive a response within 2 business days.",
+  email: "Email",
   subject: "subject",
   comment: "comment",
   sendButton: "send",

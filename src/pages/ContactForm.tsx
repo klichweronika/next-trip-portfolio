@@ -1,21 +1,24 @@
 import { ReactElement } from "react";
 import styled from "styled-components";
 
+import { Locale } from "../common/Locale";
+
 function ContactForm(): ReactElement {
   return (
     <ContactFormContainer>
       <FormContainer>
-        <h1>email us</h1>
+        <h1> {Locale.emailUs} </h1>
 
-        <InputLabel> email us</InputLabel>
-        <Input placeholder="send us a message" />
-        <InputLabel>email us </InputLabel>
-        <Input placeholder="send us a message" />
+        <InputLabel>{Locale.email}</InputLabel>
+        <Input placeholder={Locale.placeholderEmail} />
 
-        <InputLabel> send us a message</InputLabel>
-        <InputTextArea placeholder="write to us" />
+        <InputLabel>{Locale.subject}</InputLabel>
+        <Input placeholder={Locale.placeholderSubject} />
 
-        <SubmitButton type="submit">ok </SubmitButton>
+        <InputLabel>{Locale.comment}</InputLabel>
+        <InputTextArea placeholder={Locale.placeholderComment} />
+
+        <SubmitButton type="submit"> {Locale.sendButton} </SubmitButton>
       </FormContainer>
     </ContactFormContainer>
   );

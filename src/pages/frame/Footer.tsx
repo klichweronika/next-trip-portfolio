@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import styled from "styled-components";
+import { Locale } from "../../common/Locale";
 import { ReactComponent as FacebookIcon } from "../../assets/icons/facebook.svg";
 import { ReactComponent as InstagramIcon } from "../../assets/icons/instagram.svg";
 import { ReactComponent as CompanyIcon } from "../../assets/icons/n.svg";
@@ -13,11 +14,11 @@ function Footer(): ReactElement {
         </ShortcutBox>
 
         <ShortcutBox>
-          <Link>text</Link>
+          <Link>{Locale.contactUs}</Link>
         </ShortcutBox>
 
         <ShortcutBox>
-          <Link>text</Link>
+          <Link>{Locale.privacyPolicy}</Link>
         </ShortcutBox>
 
         <ShortcutBox>
@@ -27,7 +28,7 @@ function Footer(): ReactElement {
       </FooterBox>
 
       <FooterBox>
-        <Paragraph>all rights</Paragraph>
+        <Paragraph>{Locale.allRightsReserved}</Paragraph>
       </FooterBox>
     </FooterContainer>
   );
