@@ -11,12 +11,13 @@ function ImageSection(): ReactElement {
 }
 
 const ImageSectionContainer = styled.div`
-  min-height: 10rem;
+  min-height: 20rem;
   display: flex;
 `;
 
 const BackgroundImage = styled.img`
   flex: 1;
+  overflow: hidden;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 `;
 
