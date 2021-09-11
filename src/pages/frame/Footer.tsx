@@ -26,10 +26,6 @@ function Footer(): ReactElement {
           <InstagramIconStyled />
         </ShortcutBox>
       </FooterBox>
-
-      <FooterBox>
-        <Paragraph>{Locale.allRightsReserved}</Paragraph>
-      </FooterBox>
     </FooterContainer>
   );
 }
