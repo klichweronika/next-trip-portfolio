@@ -7,10 +7,14 @@ function AssistanceInformation(): ReactElement {
   return (
     <>
       <AssistanceInformationContainer>
+        <Space space={5.9} />
+
         <CallContainer>
           <IconPhoneBorder>
             <PhoneIcon />
           </IconPhoneBorder>
+
+          <Space space={0.5} />
 
           <PhoneNumberLabel>{Locale.companyPhoneNumber}</PhoneNumberLabel>
         </CallContainer>
@@ -29,8 +33,12 @@ const PhoneIcon = styled(Icon)`
   height: 100%;
 `;
 
+const Space = styled.div<{ space: number }>`
+  padding: ${(props) => `${props.space}rem;`};
+`;
+
 const Text = styled.p`
-  font-size: 10px;
+  font-size: 14px;
 `;
 
 const CallContainer = styled.div`
@@ -43,23 +51,31 @@ const AssistanceInformationContainer = styled.div`
 `;
 
 const IconPhoneBorder = styled.div`
-  width: 10%;
-  height: 10%;
-  border: 2px solid #55baff;
-  padding: 1em;
+  width: 5%;
+  height: 5%;
+  border-radius: 100%;
+  border: 2px solid #65baff;
+  padding: 0.5rem;
 `;
 
 const PhoneNumberLabel = styled.label`
   width: 100%;
   flex: 1;
   flex-direction: column;
-  margin-top: 2rem;
+  text-align: center;
+  margin-top: 1rem;
   font-weight: bold;
 `;
 
 const InformationContainer = styled.div`
   text-align: left;
-  padding: 1rem;
+  padding: 0 5rem;
+
+  @media (max-width: 700px) {
+    margin: auto;
+    text-align: center;
+    padding: 0px;
+  }
 `;
 
 export default AssistanceInformation;
