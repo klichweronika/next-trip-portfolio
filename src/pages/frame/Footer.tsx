@@ -32,15 +32,16 @@ function Footer(): ReactElement {
 
 const IconBase = () => {
   return `
-    width: 3%;
-    height: 3%;
+    width: 5%;
+    height: 5%;
   `;
 };
 
 const FooterContainer = styled.div`
   width: 100%;
-  min-height: 4rem;
+  min-height: 3.2rem;
   background-color: #08315f;
+  color: white;
   margin-top: auto;
 `;
 
@@ -48,7 +49,7 @@ const FooterBox = styled.div`
   flex-direction: row;
   display: flex;
   flex: 1;
-  height: 2rem;
+  height: 3rem;
   align-items: baseline;
 `;
 
@@ -58,22 +59,24 @@ const Link = styled.p`
 
 const ShortcutBox = styled.div`
   flex: 1;
-  margin-top: auto;
+  margin: auto;
   text-align: center;
 `;
 
 const CompanyIconStyled = styled(CompanyIcon)`
   ${IconBase()}
-  margin-right: 20px;
+  margin-right: 30px;
 `;
 
 const FacebookIconStyled = styled(FacebookIcon)`
   ${IconBase()}
-  margin-right: 20px;
+  margin-right: 30px;
+  cursor: pointer;
 `;
 
 const InstagramIconStyled = styled(InstagramIcon)`
   ${IconBase()}
+  cursor: pointer;
 `;
 
 export default Footer;

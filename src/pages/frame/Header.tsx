@@ -23,6 +23,10 @@ const HeaderContainer = styled.div`
   box-sizing: border-box;
   align-items: center;
   padding: 0rem 4rem;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
 `;
 
 const ContactUs = styled.a`
@@ -32,6 +36,11 @@ const ContactUs = styled.a`
   color: #2f79ce;
   text-transform: uppercase;
   padding: 10px;
+
+  @media (max-width: 745px) {
+    display: block;
+    text-align: center;
+  }
   div {
     margin-right: 10px;
   }
@@ -40,6 +49,11 @@ const ContactUs = styled.a`
 const Logo = styled.img`
   max-width: 7rem;
   padding: 1%;
+
+  @media (max-width: 600px) {
+    display: block;
+    margin: auto;
+  }
 `;
 
 export default Header;

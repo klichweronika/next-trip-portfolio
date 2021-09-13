@@ -109,11 +109,14 @@ function ContactForm(): ReactElement {
 const InputBase = () => {
   return `
     display: block;
-    padding: 0.6rem;
+    padding: 10px;
+    margin-right: 10rem;
     font-size: 14px;
     box-sizing: border-box;
     outline: none;
     border-radius: 5px;
+      @media (max-width: 1030px) {
+      width: 50%
     `;
 };
 
@@ -130,14 +133,14 @@ const FormContainer = styled.form`
 `;
 
 const Input = styled.input<{ isValid: boolean }>`
-  min-width: 38rem;
+  min-width: 100%;
   border: ${(props) =>
     props.isValid ? "1px solid silver;" : "1px solid red;"};
   ${InputBase()}
 `;
 
 const InputTextArea = styled.textarea<{ isValid: boolean }>`
-  min-width: 38rem;
+  min-width: 100%;
   min-height: 12rem;
 
   border: ${(props) =>

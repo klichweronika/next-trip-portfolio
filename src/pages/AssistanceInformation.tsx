@@ -70,6 +70,12 @@ const PhoneNumberLabel = styled.label`
 const InformationContainer = styled.div`
   text-align: left;
   padding: 0 5rem;
+
+  @media (max-width: 745px) {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+  }
 `;
 
 export default AssistanceInformation;

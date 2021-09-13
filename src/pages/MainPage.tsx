@@ -22,6 +22,10 @@ const FormSection = styled.div`
   flex-direction: row;
   min-height: 30rem;
   flex: 1;
+
+  @media (max-width: 745px) {
+    flex-direction: column;
+  }
 `;
 
 export default MainPage;
