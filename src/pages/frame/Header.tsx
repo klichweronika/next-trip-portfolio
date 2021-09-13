@@ -24,7 +24,7 @@ const HeaderContainer = styled.div`
   align-items: center;
   padding: 0rem 4rem;
 
-  @media (max-width: 600px) {
+  @media (max-width: 745px) {
     display: block;
   }
 `;
@@ -50,7 +50,7 @@ const Logo = styled.img`
   max-width: 7rem;
   padding: 1%;
 
-  @media (max-width: 600px) {
+  @media (max-width: 745px) {
     display: block;
     margin: auto;
   }

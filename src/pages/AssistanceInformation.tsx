@@ -35,6 +35,10 @@ const PhoneIcon = styled(Icon)`
 
 const Space = styled.div<{ space: number }>`
   padding: ${(props) => `${props.space}rem;`};
+
+  @media (max-width: 745px) {
+    padding: 1rem;
+  }
 `;
 
 const Text = styled.p`
