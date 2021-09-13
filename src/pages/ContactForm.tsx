@@ -1,7 +1,10 @@
-import { ReactElement } from "react";
+import { ReactElement, useCallback, useState } from "react";
 import styled from "styled-components";
-import { useForm } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
+import Axios from "axios";
+import { Api } from "../common/ApiAdress";
 import { Locale } from "../common/Locale";
+import { GoogleReCaptcha } from "react-google-recaptcha-v3";
 import { ValidationConstants } from "../common/Validation";
 import { ErrorType, HandleError } from "../common/forms/Errors";
 
@@ -14,12 +17,43 @@ type ContactFormProps = {
 function ContactForm(): ReactElement {
   const {
     register,
+    handleSubmit,
     formState: { errors },
   } = useForm<ContactFormProps>();
 
+  const [confirmedHuman, setConfirmedHuman] = useState<boolean | undefined>(
+    undefined
+  );
+
+  const handleReCaptchaVerify = useCallback(
+    (token) => {
+      setConfirmedHuman(true);
+    },
+    [setConfirmedHuman]
+  );
+
+  const onSubmit: SubmitHandler<ContactFormProps> = async (data) => {
+    try {
+      if (!confirmedHuman) return;
+
+      const result = await Axios.post<ContactFormProps>(
+        Api.contactMessageApi,
+        data
+      );
+
+      alert(
+        `API response status: ${result.status} for data: ${JSON.stringify(
+          result.data
+        )}.`
+      );
+    } catch (error) {
+      alert(`Error occured while we were trying to send your request.`);
+    }
+  };
+
   return (
     <ContactFormContainer>
-      <FormContainer>
+      <FormContainer onSubmit={handleSubmit(onSubmit)}>
         <h1> {Locale.emailUs} </h1>
 
         <InputLabel>
@@ -65,6 +99,7 @@ function ContactForm(): ReactElement {
         />
         {errors.comment && HandleError(errors.comment.type as ErrorType)}
 
+        <GoogleReCaptcha onVerify={handleReCaptchaVerify} />
         <SubmitButton type="submit"> {Locale.sendButton} </SubmitButton>
       </FormContainer>
     </ContactFormContainer>

@@ -56,12 +56,6 @@ const Link = styled.p`
   cursor: pointer;
 `;
 
-const Paragraph = styled.a`
-  margin-top: auto;
-  margin: auto;
-  text-align: center;
-`;
-
 const ShortcutBox = styled.div`
   flex: 1;
   margin-top: auto;

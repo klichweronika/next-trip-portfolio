@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import { Api } from "./common/ApiAdress";
 import Footer from "./pages/frame/Footer";
 import Header from "./pages/frame/Header";
 import MainPage from "./pages/MainPage";
@@ -9,7 +11,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Header />
 
-    <MainPage />
+    <GoogleReCaptchaProvider reCaptchaKey={Api.recaptcha}>
+      <MainPage />
+    </GoogleReCaptchaProvider>
 
     <Footer />
   </React.StrictMode>,

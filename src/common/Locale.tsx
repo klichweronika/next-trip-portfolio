@@ -10,7 +10,6 @@ type Texts = {
   requiredInfo: string;
   contactUs: string;
   privacyPolicy: string;
-  allRightsReserved: string;
   callUs: string;
   placeholderEmail: string;
   placeholderSubject: string;
@@ -34,7 +33,6 @@ export const Locale: Texts = {
   requiredInfo: "This value is required.",
   contactUs: "Contact Us",
   privacyPolicy: "Privacy policy",
-  allRightsReserved: "@ NextTrip. All rights reserved.",
   placeholderEmail: "Enter Your Email",
   placeholderSubject: "Enter Subject",
   placeholderComment: "Write your comment...",
