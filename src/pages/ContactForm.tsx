@@ -159,14 +159,20 @@ const InputLabel = styled.label`
 
 const SubmitButton = styled.button`
   display: block;
+  color: white;
   background-color: #189ef8;
   margin-bottom: 1.5rem;
-  padding: 0.1rem;
-  width: 20rem;
+  text-transform: uppercase;
+  padding: 0.6rem;
+  width: 15rem;
   border-radius: 25px;
   margin: auto;
   margin-top: 3rem;
   border: 1px solid #189ef8;
+
+  &:hover {
+    background-color: #157ec4;
+  }
 `;
 
 export default ContactForm;
