@@ -1,6 +1,6 @@
 # Next-Trip Portfolio
 
-I decided to build this project with React, TypeScript and StyledComponents. I used Google reCAPTCHA to create anti-bot protection for user form. Also, the form has validation. Works on mobile.
+This project is build with React, TypeScript and StyledComponents. I used Google reCAPTCHA to create anti-bot protection for user form. The form have validation. This application is responsive.
 
 # Getting Started with Create React App
 
